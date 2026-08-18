@@ -1,0 +1,28 @@
+# VS Code
+.vscode/
+
+# Build artifacts
+*.o
+*.obj
+*.exe
+*.out
+*.app
+
+# Compiled libraries
+*.lib
+*.a
+*.so
+*.dylib
+
+# Dependency files
+*.d
+
+# IDE and editor files
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db

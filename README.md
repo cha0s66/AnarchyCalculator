@@ -1,16 +1,21 @@
-# AnarchyCalculator V1.0
+# AnarchyCalculator V2.0
 
-A simple command-line calculator that supports basic arithmetic operations with proper order of operations.
+A command-line calculator that supports arithmetic operations with proper order of operations, including parentheses and exponents.
 
 Created by: **cha0s66**
 
 ## Features
 
-- ✅ Basic arithmetic operations: `+`, `-`, `*`, `/`
-- ✅ Correct order of operations (multiplication/division before addition/subtraction)
-- ✅ Left-to-right evaluation for operators of equal precedence
-- ✅ Debug mode for troubleshooting
-- ✅ Error handling (division by zero, unknown operators)
+- ✅ Arithmetic operations: `+`, `-`, `*`, `/`
+- ✅ Exponentiation operator: `^`
+- ✅ Parentheses support for grouping expressions
+- ✅ Correct order of operations (PEMDAS/BODMAS):
+  - Parentheses (highest priority)
+  - Exponents
+  - Multiplication/Division
+  - Addition/Subtraction (lowest priority)
+- ✅ Error handling (division by zero, mismatched parentheses)
+- ✅ Support for decimal numbers and negative values
 
 ## Build Instructions
 
@@ -37,22 +42,27 @@ Run the executable:
 ### Example
 ```
 -------------------------------------------------------------
-                 AnarchyCalculator V1.0!                     
+                 AnarchyCalculator V2.0!                     
                    Created by: cha0s66                       
 -------------------------------------------------------------
-Enter equation (use +, -, *, / operators):
-125/10*100
-The answer is: 1250
+Enter equation (use +, -, *, /, ^ operators and parentheses):
+Example: (2^4) or 3*(2+5)^2
+(2^4)
+The answer is: 16
 ```
 
 ### Supported Operations
 ```
-125+50        → 175
-100-25        → 75
-12*8          → 96
-100/5         → 20
-2+3*4         → 14    (correct order of operations)
-125/10*100    → 1250  (left-to-right for equal precedence)
+125+50          → 175
+100-25          → 75
+12*8            → 96
+100/5           → 20
+2^4             → 16               (exponentiation)
+(2+3)*4         → 20               (parentheses)
+3*(2+5)^2       → 147              (combined operators)
+2+3*4           → 14               (correct order of operations)
+(10+5)/(2+1)    → 5                (complex expression)
+2^3^2           → 512              (2^(3^2), right-to-left exponentiation)
 ```
 
 ### Debug Mode
@@ -67,12 +77,14 @@ This will display tokenization and calculation steps.
 
 ## Error Handling
 - **Division by zero**: Returns error message and 0
-- **Unknown operator**: Returns error message and 0
+- **Mismatched parentheses**: Returns error message and 0
 
-## Limitations
-- No parentheses support
-- Integers and decimal results supported
-- Single equation per run
+## What's New in V2.0
+- Added exponentiation operator (`^`)
+- Full parentheses support with proper nesting
+- Improved expression parsing and evaluation
+- Better error messages
 
 ## License
 MIT License - See LICENSE file for details
+
